@@ -14,7 +14,8 @@ I_Rapp1990_2 = imread('TestImage_Rapp1990_2.png');
 I_Alberello2018 = imread('TestImage_Alberello2018.png');
 I_CC2020 = imread('TestImage_Craciunescu2020.png');
 I_Lim2015 = imread('TestImage_Lim2015.png');
-
+I_Lubin2019 = rgb2gray(imread('TestImage_Lubin2019.png'));
+I_Perlin1996 = rgb2gray(imread('TestImage_Perlin1996.png'));
 
 %% Surface detection case 1: This case is for a steep, non-breaking wave passing through the middle part of the ROI
 recPo1 = [300 80 2100-300 550]; % Create a ROI
@@ -139,7 +140,7 @@ rectangle('Position',recPo10_1,'linewidth',3,'EdgeColor','r')
 plot(i_pixel_1, j_pixel_1,'-.g','linewidth',1.5)
 
 
-%% Surface detection case 11: This case is a snapshot of Figure 5 from Lubin et al (2019) European Journal of Mechanics / B Fluids 
+%% Surface detection case 11: This case is a snapshot of Figure 11 from Lubin et al (2019) European Journal of Mechanics / B Fluids 
 recPo11 = [212 167 404-212 234-167]; % Create a ROI
 [j_pixel, i_pixel, ~] = fSurfacePixelDetection_RC_vPoF(I_Lubin2019, recPo11, 5, 3);
 figure(11); clf; 
